@@ -1,0 +1,25 @@
+{
+  "name": "advanced-redux",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "mimic": "^2.0.2",
+    "normalizr": "^3.2.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-actions": "^2.0.2",
+    "seamless-immutable": "^7.1.2"
+  },
+  "scripts": {
+    "start": "NODE_PATH=src react-scripts start",
+    "build": "NODE_PATH=src react-scripts build",
+    "test": "NODE_PATH=src react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

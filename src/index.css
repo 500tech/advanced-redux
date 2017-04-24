@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 5px auto;
+  padding: 0;
+}
+
+h1 { font-size: 18px; }
+h2 { font-size: 14px; }
+
+.panel {
+  width: 350px;
+  min-height: 190px;
+  border: 1px solid #FE0A53;
+  border-radius: 3px;
+  margin: 10px;
+  position: relative;
+  float: left;
+  padding-bottom: 50px;
+}
+
+.panel.small {
+  min-height: inherit;
+}
+
+.panel h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.panel input, .panel select {
+  border: 1px solid #FE0A53;
+  border-radius: 3px;
+  margin: 0 4px;
+  padding: 2px;
+  background-color: white;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 5px;
+}
+
+button {
+  border: 2px solid #FE0A53;
+  border-radius: 5px;
+  background-color: white;
+  margin: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+i {
+  font-size: 12px;
+}
+
+.spinner {
+  margin: auto;
+  display: block;
+}

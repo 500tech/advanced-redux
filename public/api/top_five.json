@@ -1,0 +1,42 @@
+[
+  {
+    "id": 12,
+    "name": "Star Trek: Nemesis",
+    "user": {
+      "id": 12,
+      "name": "Leonard Nimoy"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Firefly",
+    "user": {
+      "id": 14,
+      "name": "Joss Whedon"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Star Trek Beyond",
+    "user": {
+      "id": 12,
+      "name": "Leonard Nimoy"
+    }
+  },
+  {
+    "id": 2,
+    "name": "The Empire Strikes Back",
+    "user": {
+      "id": 11,
+      "name": "Mr Lucas"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Return of the Jedi",
+    "user": {
+      "id": 11,
+      "name": "Mr Lucas"
+    }
+  }
+]

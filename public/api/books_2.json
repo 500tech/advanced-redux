@@ -1,0 +1,26 @@
+[
+  {
+    "id": 13,
+    "name": "Babylon 5",
+    "user": {
+      "id": 13,
+      "name": "J. Michael Straczynski"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Firefly",
+    "user": {
+      "id": 14,
+      "name": "Joss Whedon"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Doctor Who",
+    "user": {
+      "id": 17,
+      "name": "Sydney Newman"
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "A New Hope",
+    "user": {
+      "id": 11,
+      "name": "Mr Lucas"
+    }
+  },
+  {
+    "id": 2,
+    "name": "The Empire Strikes Back",
+    "user": {
+      "id": 11,
+      "name": "Mr Lucas"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Return of the Jedi",
+    "user": {
+      "id": 11,
+      "name": "Mr Lucas"
+    }
+  },
+  {
+    "id": 4,
+    "name": "The Phantom Menace",
+    "user": {
+      "id": 12,
+      "name": "Unknown??"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Attack of the Clones",
+    "user": {
+      "id": 11,
+      "name": "Mr Lucas"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Revenge of the Sith",
+    "user": {
+      "id": 11,
+      "name": "Mr Lucas"
+    }
+  }
+]

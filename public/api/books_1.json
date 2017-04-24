@@ -1,0 +1,26 @@
+[
+  {
+    "id": 12,
+    "name": "Star Trek: Nemesis",
+    "user": {
+      "id": 12,
+      "name": "Leonard Nimoy"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Star Trek Into Darkness",
+    "user": {
+      "id": 12,
+      "name": "Leonard Nimoy"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Star Trek Beyond",
+    "user": {
+      "id": 12,
+      "name": "Leonard Nimoy"
+    }
+  }
+]
