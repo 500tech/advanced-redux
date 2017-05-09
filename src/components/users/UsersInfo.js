@@ -1,14 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Spinner from 'components/common/Spinner';
+import { getRequestsCount } from 'reducers/ui';
+import { connect } from 'react-redux';
 
-const UsersInfo = ({ users }) => (
+const UsersInfo = ({ users, pending }) => (
   <ul>
-    { users.map(user => <li key={ user }>{ user }</li>) }
+    {
+      pending
+        ? <Spinner />
+        : users.map(user => <li key={ user }>{ user }</li>)
+    }
   </ul>
 );
 
 UsersInfo.propTypes = {
-  users: PropTypes.array.isRequired
+  users: PropTypes.array.isRequired,
+  pending: PropTypes.bool.isRequired
 };
 
-export default UsersInfo;
+const mapStateToProps = state => ({
+  pending: getRequestsCount(state, 'users') > 0
+});
+
+export default connect(mapStateToProps)(UsersInfo);

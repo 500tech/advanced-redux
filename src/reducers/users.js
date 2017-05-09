@@ -6,5 +6,5 @@ const initialState = Immutable(['Suziq', 'Kipi']);
 
 export default handleActions({
   [ADD_USER]: (users, { payload }) => users.concat(payload),
-  [MERGE_USERS]: (users, { payload }) => Immutable(Array.from(new Set(users.concat(payload)))),
+  [MERGE_USERS]: (users, { payload }) => Immutable(Array.from(new Set(users.concat(payload))))
 }, initialState);

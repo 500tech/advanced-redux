@@ -14,6 +14,10 @@ export const fetchUsers = () => ({
   type: consts.API,
   payload: {
     url: 'simple/users.json',
-    success: mergeUsers
+    success: mergeUsers,
+    name: 'users'
+  },
+  meta: {
+    debounce: 500
   }
 });

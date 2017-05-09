@@ -16,6 +16,7 @@ export const fetchBooks = () => ({
     success: data => [
       mergeUsers(data.map(book => book.user )),
       mergeBooks(data)
-    ]
+    ],
+    name: 'books'
   }
 });
