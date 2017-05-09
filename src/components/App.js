@@ -1,6 +1,7 @@
 import React from 'react';
 import Users from './users/Users';
 import Books from './books/Books';
+import AddUser from './users/AddUser';
 
 const App = () => (
   <div className="app">
@@ -9,6 +10,7 @@ const App = () => (
 
     <Users />
     <Books />
+    <AddUser />
   </div>
 );
 

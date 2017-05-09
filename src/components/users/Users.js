@@ -1,22 +1,32 @@
 import React from 'react';
 import Controls from '../common/Controls';
 import UsersInfo from './UsersInfo';
+import { connect } from 'mini-react-redux';
+import PropTypes from 'prop-types';
 
-const users = ['Suziq', 'Kipi'];
+const Users = ({ users, addUser }) => (
+      <div className="panel">
+        <h3>Users</h3>
 
-const Users = () => (
-  <div className="panel">
-    <h3>Users</h3>
+        <UsersInfo users={ users }/>
 
-    <UsersInfo users={ users } />
-
-    <Controls>
-      <button>Reload</button>
-    </Controls>
-  </div>
-);
+        <Controls>
+          <button onClick={ addUser }>Reload</button>
+        </Controls>
+      </div>
+    );
 
 Users.propTypes = {
+  users: PropTypes.array.isRequired,
+  addUser: PropTypes.func.isRequired
 };
 
-export default Users;
+const mapStateToProps = (state) => ({
+  users: state.users
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addUser: () => dispatch({ type: 'ADD_USER', name: Math.random() })
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Users);
