@@ -3,30 +3,27 @@ import Controls from '../common/Controls';
 import UsersInfo from './UsersInfo';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { fetchUsers } from 'actions/users';
 
-const Users = ({ users, addUser }) => (
+const Users = ({ users, fetchUsers }) => (
       <div className="panel">
         <h3>Users</h3>
 
         <UsersInfo users={ users }/>
 
         <Controls>
-          <button onClick={ addUser }>Reload</button>
+          <button onClick={ fetchUsers }>Reload</button>
         </Controls>
       </div>
     );
 
 Users.propTypes = {
   users: PropTypes.array.isRequired,
-  addUser: PropTypes.func.isRequired
+  fetchUsers: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
   users: state.users
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  addUser: () => dispatch({ type: 'ADD_USER', name: Math.random() })
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Users);
+export default connect(mapStateToProps, { fetchUsers })(Users);

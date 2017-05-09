@@ -4,6 +4,7 @@ import App from './components/App';
 import './index.css';
 import store from 'store';
 import { Provider } from 'react-redux';
+import 'mimic';
 
 ReactDOM.render(
   <Provider store={ store }>

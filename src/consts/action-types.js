@@ -1,2 +1,5 @@
 export const ADD_USER = 'ADD_USER';
 export const ADD_BOOK = 'ADD_BOOK';
+export const MERGE_USERS = 'MERGE_USERS';
+export const MERGE_BOOKS = 'MERGE_BOOKS';
+export const API = 'API';

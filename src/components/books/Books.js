@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import Controls from 'components/common/Controls';
 import BooksInfo from './BooksInfo';
 import { connect } from 'react-redux';
+import { fetchBooks } from 'actions/books';
 
-const Books = ({ books, addBook }) => (
+const Books = ({ books, fetchBooks }) => (
   <div className="panel">
     <h3>Books</h3>
 
     <BooksInfo books={ books } />
 
     <Controls>
-      <button onClick={ addBook }>Reload</button>
+      <button onClick={ fetchBooks }>Reload</button>
     </Controls>
   </div>
 );
 
 Books.propTypes = {
   books: PropTypes.array.isRequired,
-  addBook: PropTypes.func.isRequired
+  fetchBooks: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
   books: state.books
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  addBook: () => dispatch({ type: 'ADD_BOOK', name: Math.random(), user: Math.random().toString() })
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Books);
+export default connect(mapStateToProps, { fetchBooks })(Books);
