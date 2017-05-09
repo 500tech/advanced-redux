@@ -17,5 +17,5 @@ const initialState = Immutable([
 ]);
 
 export default handleActions({
-  ADD_BOOK: (books, { name, user }) => books.concat({ name, user })
+  ADD_BOOK: (books, { payload: { name, user } }) => books.concat({ name, user })
 }, initialState);

@@ -1,7 +1,8 @@
 import React from 'react';
 import Controls from 'components/common/Controls';
 import PropTypes from 'prop-types';
-import { connect } from 'mini-react-redux';
+import { connect } from 'react-redux';
+import { addUser } from 'actions/users';
 
 class AddUser extends React.Component {
   addUser = (e) => {
@@ -31,8 +32,4 @@ AddUser.propTypes = {
   addUser: PropTypes.func.isRequired
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  addUser: (name) => dispatch({ type: 'ADD_USER', name })
-});
-
-export default connect(null, mapDispatchToProps)(AddUser);
+export default connect(null, { addUser })(AddUser);
