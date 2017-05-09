@@ -8,7 +8,7 @@ class AddBook extends React.Component {
   addBook = (e) => {
     e.preventDefault();
 
-    this.props.addBook(this.name.value, this.user.value);
+    this.props.addBook(this.name.value, parseInt(this.user.value, 10));
 
     this.name.value = '';
   };
@@ -21,7 +21,7 @@ class AddBook extends React.Component {
           <form onSubmit={ this.addBook }>
             <input type="text" ref={ elem => this.name = elem } />
             <select ref={ elem => this.user = elem }>
-              { this.props.users.map(user => <option key={ user} value={ user }>{ user }</option> )}
+              { this.props.users.map(user => <option key={ user.id } value={ user.id }>{ user.name }</option> )}
             </select>
             <button>Add</button>
           </form>
@@ -37,7 +37,7 @@ AddBook.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  users: state.users
+  users: Object.values(state.users)
 });
 
 export default connect(mapStateToProps, { addBook })(AddBook);

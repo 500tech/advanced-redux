@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const UserInfo = ({ user }) => (
-  <span>{ user }</span>
+  <span>{ user.name }</span>
 );
 
 UserInfo.propTypes = {
-  user: PropTypes.string.isRequired
+  user: PropTypes.object.isRequired
 };
 
-export default UserInfo;
+const mapStateToProps = (state, ownProps) => ({
+  user: state.users[ownProps.id]
+});
+
+export default connect(mapStateToProps)(UserInfo);

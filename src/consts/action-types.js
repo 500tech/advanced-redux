@@ -5,3 +5,4 @@ export const MERGE_BOOKS = 'MERGE_BOOKS';
 export const API = 'API';
 export const START_NETWORK = 'START_NETWORK';
 export const END_NETWORK = 'END_NETWORK';
+export const SET_LIST = 'SET_LIST';

@@ -5,7 +5,12 @@ export const startNetwork = (payload = 'global') => ({
   payload
 });
 
-export const endNetwork= (payload = 'global') => ({
+export const endNetwork = (payload = 'global') => ({
   type: consts.END_NETWORK,
   payload
+});
+
+export const setList = (name, list) => ({
+  type: consts.SET_LIST,
+  payload: { name, list }
 });

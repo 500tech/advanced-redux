@@ -11,9 +11,9 @@ const BooksInfo = ({ books, pending }) => (
       pending
         ? <Spinner />
         : books.map(book => (
-            <li key={ book.name }>
+            <li key={ book.id }>
               { book.name }
-              <i> by <UserInfo user={ book.user }/></i>
+              <i> by <UserInfo id={ book.user }/></i>
             </li>
           ))
     }
@@ -25,8 +25,9 @@ BooksInfo.propTypes = {
   pending: PropTypes.bool.isRequired
 };
 
-const mapStateToProps = state => ({
-  pending: getRequestsCount(state, 'books') > 0
+const mapStateToProps = (state, ownProps) => ({
+  pending: getRequestsCount(state, ownProps.type) > 0,
+  books: ownProps.list.map(id => state.books[id])
 });
 
 export default connect(mapStateToProps)(BooksInfo);

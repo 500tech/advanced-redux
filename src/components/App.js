@@ -1,6 +1,7 @@
 import React from 'react';
 import Users from './users/Users';
 import Books from './books/Books';
+import TopFive from './books/TopFive';
 import AddUser from './users/AddUser';
 import AddBook from './books/AddBook';
 import Spinner from 'components/common/Spinner';
@@ -16,6 +17,8 @@ const App = ({ network }) => (
 
     <Users />
     <Books />
+    <TopFive />
+
     <AddUser />
     <AddBook />
   </div>

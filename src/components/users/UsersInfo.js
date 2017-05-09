@@ -9,7 +9,7 @@ const UsersInfo = ({ users, pending }) => (
     {
       pending
         ? <Spinner />
-        : users.map(user => <li key={ user }>{ user }</li>)
+        : users.map(user => <li key={ user.id }>{ user.name }</li>)
     }
   </ul>
 );
@@ -19,8 +19,9 @@ UsersInfo.propTypes = {
   pending: PropTypes.bool.isRequired
 };
 
-const mapStateToProps = state => ({
-  pending: getRequestsCount(state, 'users') > 0
+const mapStateToProps = (state, ownProps) => ({
+  pending: getRequestsCount(state, 'users') > 0,
+  users: ownProps.list.map(id => state.users[id])
 });
 
 export default connect(mapStateToProps)(UsersInfo);

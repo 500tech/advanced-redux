@@ -5,11 +5,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchUsers } from 'actions/users';
 
-const Users = ({ users, fetchUsers }) => (
+const Users = ({ list, fetchUsers }) => (
       <div className="panel">
         <h3>Users</h3>
 
-        <UsersInfo users={ users }/>
+        <UsersInfo list={ list }/>
 
         <Controls>
           <button onClick={ fetchUsers }>Reload</button>
@@ -18,12 +18,12 @@ const Users = ({ users, fetchUsers }) => (
     );
 
 Users.propTypes = {
-  users: PropTypes.array.isRequired,
+  list: PropTypes.array.isRequired,
   fetchUsers: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  users: state.users
+  list: Object.keys(state.users)
 });
 
 export default connect(mapStateToProps, { fetchUsers })(Users);

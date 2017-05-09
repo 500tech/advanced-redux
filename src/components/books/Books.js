@@ -4,26 +4,29 @@ import Controls from 'components/common/Controls';
 import BooksInfo from './BooksInfo';
 import { connect } from 'react-redux';
 import { fetchBooks } from 'actions/books';
+import { getList } from 'reducers/ui';
 
-const Books = ({ books, fetchBooks }) => (
+const Books = ({ list, fetchBooks }) => (
   <div className="panel">
     <h3>Books</h3>
 
-    <BooksInfo books={ books } />
+    <BooksInfo list={ list } type='books' />
 
     <Controls>
-      <button onClick={ fetchBooks }>Reload</button>
+      <button onClick={ () => fetchBooks('books', 0) }>Page 1</button>
+      <button onClick={ () => fetchBooks('books', 1) }>Page 2</button>
+      <button onClick={ () => fetchBooks('books', 2) }>Page 3</button>
     </Controls>
   </div>
 );
 
 Books.propTypes = {
-  books: PropTypes.array.isRequired,
+  list: PropTypes.array.isRequired,
   fetchBooks: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  books: state.books
+  list: getList(state, 'books')
 });
 
 export default connect(mapStateToProps, { fetchBooks })(Books);
