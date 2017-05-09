@@ -1,5 +1,6 @@
 import { handleActions } from 'redux-actions';
 import Immutable from 'seamless-immutable';
+import { ADD_BOOK } from 'consts/action-types';
 
 const initialState = Immutable([
   {
@@ -17,5 +18,5 @@ const initialState = Immutable([
 ]);
 
 export default handleActions({
-  ADD_BOOK: (books, { payload: { name, user } }) => books.concat({ name, user })
+  [ADD_BOOK]: (books, { payload: { name, user } }) => books.concat({ name, user })
 }, initialState);
