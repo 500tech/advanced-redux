@@ -1,7 +1,7 @@
 import React from 'react';
 import Controls from '../common/Controls';
 import UsersInfo from './UsersInfo';
-import { connect } from 'mini-react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const Users = ({ users, addUser }) => (

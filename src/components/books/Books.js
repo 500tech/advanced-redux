@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Controls from 'components/common/Controls';
 import BooksInfo from './BooksInfo';
-import { connect } from 'mini-react-redux';
+import { connect } from 'react-redux';
 
 const Books = ({ books, addBook }) => (
   <div className="panel">
